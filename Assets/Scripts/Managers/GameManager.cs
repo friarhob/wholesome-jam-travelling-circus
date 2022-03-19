@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public SoundManager soundManager;
+    public MenuManager menuManager;
     public GameObject mainMenuCanvas;
     public GameObject[] introDialogueCanvases;
     private int currentIntroDialogue;
