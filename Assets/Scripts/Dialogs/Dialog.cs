@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "Dialog", menuName = "DialongSystem")]
-public class Dialogue : ScriptableObject
+public class Dialog : ScriptableObject
 {
 
 
