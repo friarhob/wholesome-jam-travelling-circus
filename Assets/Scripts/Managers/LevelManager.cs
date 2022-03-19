@@ -64,6 +64,7 @@ public class LevelManager : MonoBehaviour
     public void Run() //start level
     {
         Manager.Instance.menuManager.dialoguesManager.StartDialog(Dialogues[level]); //start dialog on every level begin
+        Manager.Instance.menuManager.HideAllMenuParts();
 
         Invoke(nameof(StartLevelLogic),Manager.Instance.menuManager.dialoguesManager.currentDialog.GetSumDialogueTime());
 

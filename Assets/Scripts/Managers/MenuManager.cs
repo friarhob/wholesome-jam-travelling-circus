@@ -10,10 +10,7 @@ public class MenuManager : MonoBehaviour
 
     public DialogsManager dialoguesManager;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+   
     void Start()
     {
         
