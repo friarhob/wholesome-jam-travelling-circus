@@ -74,3 +74,5 @@ crashlytics-build.properties
 
 # zip file for itch.io submit
 /*.zip
+Narration.docx
+Assets/Resources/Art/Background.psd
