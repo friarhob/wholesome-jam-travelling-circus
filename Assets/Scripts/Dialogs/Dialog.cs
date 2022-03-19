@@ -16,6 +16,15 @@ public class Dialog : ScriptableObject
     {
         return Phrases;
     }
+
+    public float GetSumDialogueTime()
+    {
+        float time = 0;
+        foreach (Phrase p in Phrases)
+            time += p.Time;
+
+        return time;
+    }
 }
 
 

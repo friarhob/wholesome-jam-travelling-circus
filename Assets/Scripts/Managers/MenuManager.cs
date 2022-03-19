@@ -8,16 +8,18 @@ public class MenuManager : MonoBehaviour
 
     public List<MenuPart> MenuParts = new List<MenuPart>();
 
+    public DialogsManager dialoguesManager;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
-
+        
     }
 
 
-    void Update()
-    {
-
-    }
 
     public void LoadMenuPart(string menuType)
     {
