@@ -14,11 +14,11 @@ public class MusicSwitcherButton : MonoBehaviour
         MusicEnabled = true;
     }
 
-    
+
 
     public void SwitchMusic()
     {
-        if(MusicEnabled)
+        if (MusicEnabled)
         {
             ButtonText.text = "Music On";
         }
