@@ -10,7 +10,7 @@ public class DialogsManager : MonoBehaviour
     public event UnityAction OnDialogStarted;
     public event UnityAction OnDialogFinished;
 
-    private Dialog currentDialog;
+    public Dialog currentDialog { get; private set; }
     List<Phrase> Phrases = new List<Phrase>();
     int currentPhraseIndex;
 
@@ -18,6 +18,8 @@ public class DialogsManager : MonoBehaviour
     AudioSource Dictor;
     [SerializeField]
     TextMeshProUGUI PhraseText;
+    [SerializeField]
+    Canvas canvas;
 
 
     void Start()
@@ -28,6 +30,7 @@ public class DialogsManager : MonoBehaviour
     public void StartDialog(Dialog dialog)
     {
 
+        canvas.gameObject.SetActive(true);
         currentPhraseIndex = 0;
         currentDialog = dialog;
         Phrases = currentDialog.GetPhrases();
@@ -38,6 +41,7 @@ public class DialogsManager : MonoBehaviour
 
     public void FinishDialog()
     {
+        canvas.gameObject.SetActive(false);
         Debug.Log("Dialog finished!");
         OnDialogFinished?.Invoke();
     }
