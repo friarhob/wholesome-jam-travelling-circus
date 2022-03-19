@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 
 public class MusicSwitcherButton : MonoBehaviour
@@ -7,7 +7,9 @@ public class MusicSwitcherButton : MonoBehaviour
 
     private bool MusicEnabled;
     [SerializeField]
-    private TextMeshProUGUI ButtonText;
+    private Image ButtonImage;
+    [SerializeField] private Sprite MusicOnSprite;
+    [SerializeField] private Sprite MusicOffSprite;
 
     void Start()
     {
@@ -20,11 +22,11 @@ public class MusicSwitcherButton : MonoBehaviour
     {
         if (MusicEnabled)
         {
-            ButtonText.text = "Music On";
+            ButtonImage.sprite = MusicOnSprite;
         }
         else
         {
-            ButtonText.text = "Music Off";
+            ButtonImage.sprite = MusicOffSprite;
         }
         MusicEnabled = !MusicEnabled;
     }
