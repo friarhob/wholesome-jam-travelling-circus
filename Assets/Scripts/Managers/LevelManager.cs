@@ -16,13 +16,15 @@ public class LevelManager : MonoBehaviour
         Manager.Instance.currentLevel = this;
         levelTime = 0;
     }
-    public void Run()           //start game
+
+    
+    public void Run() //start game
     {
 
         OnStartLevel?.Invoke();
     }
 
-    public void End(/*any result of game*/)          //end game
+    public void End(/*any result of game*/) //end game
     {
         OnFinishLevel?.Invoke();
     }
