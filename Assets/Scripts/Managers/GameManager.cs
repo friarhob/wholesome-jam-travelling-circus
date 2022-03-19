@@ -10,18 +10,30 @@ public class GameManager : MonoBehaviour
     public GameObject mainMenuCanvas;
     public GameObject[] introDialogueCanvases;
     private int currentIntroDialogue;
+    private bool levelRunning;
+    private int level;
+    public float remainingTime;
 
     // Start is called before the first frame update
     void Start()
     {
         mainMenuCanvas.SetActive(true);
         currentIntroDialogue = 0;
+        levelRunning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(levelRunning)
+        {
+            remainingTime -= Time.deltaTime;
+            if(remainingTime < 0)
+            {
+                levelRunning = false;
+                // TODO: add night time;
+            }
+        }
     }
 
     public void StartGame()
@@ -45,8 +57,16 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("GameScene");
+            RunGame();
         }
         
+    }
+
+    private void RunGame()
+    {
+        SceneManager.LoadScene("GameScene");
+        levelRunning = true;
+        level = 1;
+        remainingTime = 10f - level;
     }
 }
