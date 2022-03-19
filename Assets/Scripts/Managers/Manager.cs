@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
-
-    //you can get any manager(sound,menu,anything) for  each levelManager from this GLOBAL manager
-
     
+    //you can get any manager(sound,menu,anything) for  each levelManager from this GLOBAL manager
     public static Manager Instance { get; private set; }
 
     public SoundManager soundManager;

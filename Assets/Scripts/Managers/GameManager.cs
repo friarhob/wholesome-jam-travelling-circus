@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject mainMenuCanvas;
     public GameObject[] introDialogueCanvases;
     private int currentIntroDialogue;
-    private bool levelRunning;
-    private int level;
-    public float remainingTime;
+    bool levelRunning;
+    float remainingTime;
+    int level;
 
     // Start is called before the first frame update
     void Start()

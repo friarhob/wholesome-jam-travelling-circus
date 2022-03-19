@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
-public class DIalogsManager : MonoBehaviour
+public class DialogsManager : MonoBehaviour
 {
 
     public event UnityAction OnDialogStarted;

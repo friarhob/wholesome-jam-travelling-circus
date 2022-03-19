@@ -9,15 +9,9 @@ public partial class MenuPart : MonoBehaviour
     [SerializeField]
     MenuPartType partType;
     [SerializeField]
-    GameManager gameManager;
+    
 
-    private void Start()
-    {
-        if (!gameManager.menuManager.MenuParts.Contains(this))
-        {
-            gameManager.menuManager.MenuParts.Add(this);
-        }
-    }
+    
     public MenuPartType PartType { get { return partType; } private set { } }
     public void Hide()
     {
