@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-   
+
     public List<MenuPart> MenuParts = new List<MenuPart>();
-    
+
     void Start()
     {
-        
+
     }
 
-   
+
     void Update()
     {
-        
+
     }
 
     public void LoadMenuPart(string menuType)
@@ -34,10 +34,10 @@ public class MenuManager : MonoBehaviour
 
     public void HideAllMenuParts()
     {
-        foreach(MenuPart mp in MenuParts)
+        foreach (MenuPart mp in MenuParts)
         {
             mp.Hide();
         }
     }
-    
+
 }

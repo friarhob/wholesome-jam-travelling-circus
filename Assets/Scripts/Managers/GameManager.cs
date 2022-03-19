@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(levelRunning)
+        if (levelRunning)
         {
             remainingTime -= Time.deltaTime;
-            if(remainingTime < 0)
+            if (remainingTime < 0)
             {
                 levelRunning = false;
                 // TODO: add night time;
@@ -44,12 +44,12 @@ public class GameManager : MonoBehaviour
 
     private void LoadIntroDialogue()
     {
-        if(currentIntroDialogue > 0)
+        if (currentIntroDialogue > 0)
         {
-            introDialogueCanvases[currentIntroDialogue-1].SetActive(false);
+            introDialogueCanvases[currentIntroDialogue - 1].SetActive(false);
         }
 
-        if(currentIntroDialogue < introDialogueCanvases.Length)
+        if (currentIntroDialogue < introDialogueCanvases.Length)
         {
             introDialogueCanvases[currentIntroDialogue].SetActive(true);
             currentIntroDialogue++;
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         {
             RunGame();
         }
-        
+
     }
 
     private void RunGame()

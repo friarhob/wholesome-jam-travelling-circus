@@ -13,13 +13,13 @@ public partial class MenuPart : MonoBehaviour
 
     private void Start()
     {
-        if(!gameManager.menuManager.MenuParts.Contains(this))
+        if (!gameManager.menuManager.MenuParts.Contains(this))
         {
             gameManager.menuManager.MenuParts.Add(this);
         }
     }
     public MenuPartType PartType { get { return partType; } private set { } }
-   public void Hide()
+    public void Hide()
     {
         gameObject.SetActive(false);
     }
