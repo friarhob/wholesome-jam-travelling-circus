@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b205d52f6afa16a45b972400ea4c7c2d, type: 3}
-  m_Name: IntroDialog
+  m_Name: Dialog1
   m_EditorClassIdentifier: 
   Phrases:
   - Text: Grandpa, are unicorns real?
     Time: 2
     Diction: {fileID: 8300000, guid: ac5c5d9b24c567647a9b7b653d83b5dd, type: 3}
-  - Text: "Of course! Unicorns, griffins, wyverns \u2014 they\u2019re all real. But
-      they\u2019re dying because almost no one believes in them anymore. Our community
-      has to save them. We have to make the world believe again!"
+  - Text: "Of course! Unicorns, griffins, wyverns\u2014they\u2019re all real. But
+      they\u2019re dying because no one believes in them anymore. You have to save
+      them. You have to make the world believe again"
     Time: 12
     Diction: {fileID: 8300000, guid: 23d760c973abc4c4592f8337f0524545, type: 3}
-  - Text: Take care of some of those creatures. If we all work together, we will
-      be able to save them
-    Time: 5
+  - Text: Some phrase
+    Time: 2
+    Diction: {fileID: 0}
+  - Text: answer to some phrase
+    Time: 3
     Diction: {fileID: 0}
