@@ -5,14 +5,9 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
-    public event UnityAction OnFinishLevel;
-
     private bool levelRunning;
     private int level;
     public float remainingTime;
-
-    public Dialog dialogue;
 
     public GameObject backgroundDay;
     public GameObject foregroundDay;
@@ -21,9 +16,10 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        Manager.Instance.currentLevel = this;
         levelRunning = false;
         level = 1;
+
+        StartLevel();
     }
 
     void Update()
@@ -45,7 +41,7 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    private void StartLevelLogic()
+    private void StartLevel()
     {
         level++;
         levelRunning = true;
@@ -57,19 +53,4 @@ public class LevelManager : MonoBehaviour
         foregroundNight.SetActive(false);
     }
 
-/*    public void Run() //start level
-    {
-        Manager.Instance.dialogueManager.StartDialog(Dialogues[level]); //start dialog on every level begin
-        Manager.Instance.menuManager.HideAllMenuParts();
-
-        Invoke(nameof(StartLevelLogic),Manager.Instance.dialogueManager.currentDialog.GetSumDialogueTime());
-
-        
-    }*/
-
-    public void EndLevelLogic(/*any result of game*/) //end level
-    {
-        level++;
-        OnFinishLevel?.Invoke();
-    }
 }
