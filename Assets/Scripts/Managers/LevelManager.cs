@@ -58,7 +58,7 @@ public class LevelManager : MonoBehaviour
         if(creature == Creature.Gryphon) gryphonImage.SetActive(true);
     }
 
-    private void StartLevel()
+    public void StartLevel()
     {
         level++;
         levelRunning = true;
@@ -72,4 +72,4 @@ public class LevelManager : MonoBehaviour
 
 }
 
-enum Creature {Nessie, Unicorn, Chimera, Gryphon};
+public enum Creature {Nessie, Unicorn, Chimera, Gryphon};
