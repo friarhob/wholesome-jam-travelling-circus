@@ -19,6 +19,10 @@ public class LevelManager : MonoBehaviour
     public GameObject chimeraImage;
     public GameObject gryphonImage;
 
+    public GameObject buyUnicornButton;
+    public GameObject buyGryphonButton;
+    public GameObject buyChimeraButton;
+
     void Start()
     {
         levelRunning = false;
@@ -50,12 +54,25 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void BuyAnimal(Creature creature)
+    public void BuyUnicorn()
     {
-        if(creature == Creature.Nessie) nessieImage.SetActive(true);
-        if(creature == Creature.Unicorn) unicornImage.SetActive(true);
-        if(creature == Creature.Chimera) chimeraImage.SetActive(true);
-        if(creature == Creature.Gryphon) gryphonImage.SetActive(true);
+        BuyAnimal(unicornImage, buyUnicornButton);
+    }
+
+    public void BuyChimera()
+    {
+        BuyAnimal(chimeraImage, buyChimeraButton);
+    }
+
+    public void BuyGryphon()
+    {
+        BuyAnimal(gryphonImage, buyGryphonButton);
+    }
+
+    private void BuyAnimal(GameObject image, GameObject button)
+    {
+        image.SetActive(true);
+        button.SetActive(false);
     }
 
     public void StartLevel()
