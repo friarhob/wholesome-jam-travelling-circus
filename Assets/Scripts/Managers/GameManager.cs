@@ -5,18 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static GameManager Instance { get; private set; }
+
     public SoundManager soundManager;
     public MenuManager menuManager;
-    public GameObject mainMenuCanvas;
-    public GameObject[] introDialogueCanvases;
-    private int currentIntroDialogue;
-    bool levelRunning;
-    float remainingTime;
-    int level;
+    public DialogsManager dialogueManager;
 
+    void Awake()
+    {
+        Instance = Instance ? Instance : this;
+    }
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
+
         mainMenuCanvas.SetActive(true);
         currentIntroDialogue = 0;
         levelRunning = true;
