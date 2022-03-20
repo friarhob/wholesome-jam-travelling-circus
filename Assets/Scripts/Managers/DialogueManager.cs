@@ -38,8 +38,8 @@ public class DialogueManager : MonoBehaviour
     IEnumerator ExecuteDialogue(int index)
     {
         if(index < introDialogueLength)
-        {
-           Phrase phrase = introDialogue.GetPhrase(index);
+        { 
+            Phrase phrase = introDialogue.GetPhrase(index);
 
             textField.text = phrase.Text;
             if(phrase.Diction)
