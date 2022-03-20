@@ -13,8 +13,7 @@ public class LevelManager : MonoBehaviour
     private int level;
     public float remainingTime;
 
-    [SerializeField]
-    List<Dialog> Dialogues = new List<Dialog>();
+    public Dialog dialogue;
 
     public GameObject backgroundDay;
     public GameObject foregroundDay;
@@ -26,8 +25,7 @@ public class LevelManager : MonoBehaviour
         Manager.Instance.currentLevel = this;
         levelRunning = false;
         level = 0;
-        Run();
-
+        RunDialogue();
     }
 
     void Update()
@@ -48,6 +46,14 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    void RunDialogue()
+    {
+        if(dialogue)
+        {
+            
+        }
+    }
+
     private void StartLevelLogic()
     {
         levelRunning = true;
@@ -61,7 +67,7 @@ public class LevelManager : MonoBehaviour
         OnStartLevel?.Invoke();
     }
 
-    public void Run() //start level
+/*    public void Run() //start level
     {
         Manager.Instance.dialogueManager.StartDialog(Dialogues[level]); //start dialog on every level begin
         Manager.Instance.menuManager.HideAllMenuParts();
@@ -69,7 +75,7 @@ public class LevelManager : MonoBehaviour
         Invoke(nameof(StartLevelLogic),Manager.Instance.dialogueManager.currentDialog.GetSumDialogueTime());
 
         
-    }
+    }*/
 
     public void EndLevelLogic(/*any result of game*/) //end level
     {
