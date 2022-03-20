@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject canvas;
     public TextMeshProUGUI textField;
     public AudioSource audioSource;
-    public GameObject introDialogue;
+    public Dialog introDialogue;
 
     // Start is called before the first frame update
     void Start()
