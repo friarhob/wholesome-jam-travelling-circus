@@ -26,10 +26,10 @@ public class DialogueManager : MonoBehaviour
     public void RunDialogue()
     {
         canvas.SetActive(true);
-
+        GameManager.Instance.menuManager.HideAllMenuParts();
         foreach(Phrase phrase in introDialogue.GetPhrases())
         {
-            ExecuteDialogue(phrase);
+            StartCoroutine(nameof(ExecuteDialogue),phrase);
         }
     }
 
