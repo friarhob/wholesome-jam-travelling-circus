@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
 
         introDialogueLength = introDialogue.GetPhrases().Count;
         
+        //This will call one phrase at a time, with respective waiting time
         StartCoroutine(nameof(ExecuteDialogue),0);
     }
 
