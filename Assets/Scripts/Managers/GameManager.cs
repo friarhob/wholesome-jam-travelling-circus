@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public SoundManager soundManager;
     public MenuManager menuManager;
     public DialogueManager dialogueManager;
-    public LevelManager levelManager;
+    //public LevelManager levelManager;
 
     void Awake()
     {
