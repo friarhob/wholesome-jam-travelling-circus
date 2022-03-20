@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        //dialogueManager.RunDialogue();
+        Debug.Log("Start Game called");
+        dialogueManager.RunDialogue();
     }
 }
