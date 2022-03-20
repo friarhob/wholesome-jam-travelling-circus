@@ -17,12 +17,12 @@ MonoBehaviour:
     Time: 2
     Diction: {fileID: 8300000, guid: ac5c5d9b24c567647a9b7b653d83b5dd, type: 3}
   - Text: "Of course! Unicorns, griffins, wyverns\u2014they\u2019re all real. But
-      they\u2019re dying because no one believes in them anymore. You have to save
-      them. You have to make the world believe again"
+      they\u2019re dying because almost no one believes in them anymore. So, we as
+      a community have to save them. We have to make the world believe again"
     Time: 12
     Diction: {fileID: 8300000, guid: 23d760c973abc4c4592f8337f0524545, type: 3}
-  - Text: Some phrase
-    Time: 2
+  - Text: So, help us taking care of those animals
+    Time: 4
     Diction: {fileID: 0}
   - Text: answer to some phrase
     Time: 3
