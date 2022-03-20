@@ -572,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &349817121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1406,7 +1406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441717015880103197, guid: 2db151274e74432498729eef654090d2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -330
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 7441717015880103197, guid: 2db151274e74432498729eef654090d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1764,7 +1764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 350}
+  m_AnchoredPosition: {x: 0, y: 360}
   m_SizeDelta: {x: 860.1612, y: 108.3078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945640000
@@ -2248,7 +2248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 350}
+  m_AnchoredPosition: {x: 0, y: 360}
   m_SizeDelta: {x: 860.1612, y: 108.3078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099489385
@@ -2822,6 +2822,9 @@ MonoBehaviour:
   canvas: {fileID: 2069179966}
   textField: {fileID: 155031238}
   introDialogue: {fileID: 1982459639}
+  dialogueQuotes: []
+  dialogueTime: []
+  dialogueAudios: []
 --- !u!4 &1624339812
 Transform:
   m_ObjectHideFlags: 0
@@ -3401,6 +3404,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1062897136}
     m_Modifications:
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_text
+      value: 'Fernando Aires: Game Designer, Composer
+
+        
+
+        Grace
+        Culloton: Creature Artist
+
+        
+
+        Gwen Katz: UI and Environment
+        Artist, Game Designer
+
+        
+
+        Kate Tacastacas: UX Designer,
+        Game Designer
+
+        
+
+        Lily Hopkins: Composer, Sound Designer
+
+        
+
+        Timofey
+        Andropov: Game Designer'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486604, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_Name
       value: Body Text
@@ -3439,7 +3478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -78.0245
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3475,7 +3514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -39.012268
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3614,7 +3653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441717015880103197, guid: 2db151274e74432498729eef654090d2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -330
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 7441717015880103197, guid: 2db151274e74432498729eef654090d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3797,7 +3836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 350}
+  m_AnchoredPosition: {x: 0, y: 360}
   m_SizeDelta: {x: 860.1612, y: 108.3078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895697539
@@ -4170,7 +4209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441717015880103197, guid: 2db151274e74432498729eef654090d2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -330
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 7441717015880103197, guid: 2db151274e74432498729eef654090d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4197,6 +4236,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1702845886}
     m_Modifications:
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_text
+      value: "The goal of the game is to raise mythical animals and show them in
+        a circus.\r\n\r\nYour animals begin as babies. Feed them and they will gradually
+        grow. \r\n\r\nTraining your animals will keep them happy. Animals will gradually
+        lose happiness over time.\r\n\r\nHappy animals generate money. The larger
+        the animal, the more money it generates.\r\n\r\nWhen you show your circus,
+        the more happy animals you have, the more people will come. The more people
+        come, the more points you earn.\r\n\r\nYou win the game when you earn 2000
+        points.  \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486604, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_Name
       value: Text (TMP)
@@ -4231,11 +4289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 522.1643
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -174.0547
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4271,7 +4329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 18.005615
       objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486605, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
