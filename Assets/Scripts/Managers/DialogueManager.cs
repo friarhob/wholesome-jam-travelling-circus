@@ -9,8 +9,10 @@ public class DialogueManager : MonoBehaviour
     public GameObject textField;
     public GameObject introDialogue;
 
+    public string[] dialogueQuotes;
+    public float[] dialogueTime;
 
-
+    public AudioClip[] dialogueAudios;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +28,9 @@ public class DialogueManager : MonoBehaviour
 
     public void RunDialogue()
     {
-        Debug.Log("Called Dialogue Manager");
         canvas.SetActive(true);
+
+
 
 /*        for(int i = 0; i < introDialogue.Phrases.Count; i++)
         {
