@@ -5,29 +5,35 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
-    public event UnityAction OnStartLevel;
-    public event UnityAction OnFinishLevel;
-
     private bool levelRunning;
     private int level;
     public float remainingTime;
-
-    [SerializeField]
-    List<Dialog> Dialogues = new List<Dialog>();
 
     public GameObject backgroundDay;
     public GameObject foregroundDay;
     public GameObject backgroundNight;
     public GameObject foregroundNight;
 
+    public GameObject nessieImage;
+    public GameObject unicornImage;
+    public GameObject chimeraImage;
+    public GameObject gryphonImage;
+
+    public GameObject buyUnicornButton;
+    public GameObject buyGryphonButton;
+    public GameObject buyChimeraButton;
+
     void Start()
     {
-        Manager.Instance.currentLevel = this;
         levelRunning = false;
-        level = 0;
-        Run();
+        level = 1;
 
+        nessieImage.SetActive(true);
+        unicornImage.SetActive(false);
+        chimeraImage.SetActive(false);
+        gryphonImage.SetActive(false);
+        
+        StartLevel();
     }
 
     void Update()
@@ -48,8 +54,30 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void StartLevelLogic()
+    public void BuyUnicorn()
     {
+        BuyAnimal(unicornImage, buyUnicornButton);
+    }
+
+    public void BuyChimera()
+    {
+        BuyAnimal(chimeraImage, buyChimeraButton);
+    }
+
+    public void BuyGryphon()
+    {
+        BuyAnimal(gryphonImage, buyGryphonButton);
+    }
+
+    private void BuyAnimal(GameObject image, GameObject button)
+    {
+        image.SetActive(true);
+        button.SetActive(false);
+    }
+
+    public void StartLevel()
+    {
+        level++;
         levelRunning = true;
         remainingTime = 10f - level;
 
@@ -57,23 +85,6 @@ public class LevelManager : MonoBehaviour
         foregroundDay.SetActive(true);
         backgroundNight.SetActive(false);
         foregroundNight.SetActive(false);
-
-        OnStartLevel?.Invoke();
     }
 
-    public void Run() //start level
-    {
-        Manager.Instance.dialogueManager.StartDialog(Dialogues[level]); //start dialog on every level begin
-        Manager.Instance.menuManager.HideAllMenuParts();
-
-        Invoke(nameof(StartLevelLogic),Manager.Instance.dialogueManager.currentDialog.GetSumDialogueTime());
-
-        
-    }
-
-    public void EndLevelLogic(/*any result of game*/) //end level
-    {
-        level++;
-        OnFinishLevel?.Invoke();
-    }
 }

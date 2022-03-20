@@ -17,6 +17,11 @@ public class Dialog : ScriptableObject
         return Phrases;
     }
 
+    public Phrase GetPhrase(int index)
+    {
+        return Phrases[index];
+    }
+
     public float GetSumDialogueTime()
     {
         float time = 0;
