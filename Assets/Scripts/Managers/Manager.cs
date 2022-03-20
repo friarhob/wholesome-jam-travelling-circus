@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
 
     public SoundManager soundManager;
     public MenuManager menuManager;
+    public DialogsManager dialogueManager;
 
     public LevelManager currentLevel;
 
@@ -26,7 +27,7 @@ public class Manager : MonoBehaviour
 
     public void LoadLevel() //load any level, i think
     {
-        LoadGameScene("GameScene");
+        SceneManager.LoadScene("GameScene");
     }
 
     void LoadGameScene(string sceneName)
