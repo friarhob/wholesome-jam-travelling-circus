@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     public AudioSource audioSource;
     public Dialog introDialogue;
 
+    private int introDialogueLength;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,21 +28,33 @@ public class DialogueManager : MonoBehaviour
     public void RunDialogue()
     {
         canvas.SetActive(true);
-        GameManager.Instance.menuManager.HideAllMenuParts();
-        foreach(Phrase phrase in introDialogue.GetPhrases())
-        {
-            StartCoroutine(nameof(ExecuteDialogue),phrase);
-        }
+        //GameManager.Instance.menuManager.HideAllMenuParts();
+
+        introDialogueLength = introDialogue.GetPhrases().Count;
+        
+        StartCoroutine(nameof(ExecuteDialogue),0);
     }
 
-    IEnumerator ExecuteDialogue(Phrase phrase)
+    IEnumerator ExecuteDialogue(int index)
     {
-        textField.text = phrase.Text;
-        if(phrase.Diction)
+        if(index < introDialogueLength)
         {
-            audioSource.clip = phrase.Diction;
-            audioSource.Play();
+           Phrase phrase = introDialogue.GetPhrase(index);
+
+            textField.text = phrase.Text;
+            if(phrase.Diction)
+            {
+                audioSource.clip = phrase.Diction;
+                audioSource.Play();
+            }
+
+            yield return new WaitForSeconds(phrase.Time);
+
+            ExecuteDialogue(index+1);
         }
-        yield return new WaitForSeconds(phrase.Time);
+        else
+        {
+            canvas.SetActive(false);
+        }
     }
 }
