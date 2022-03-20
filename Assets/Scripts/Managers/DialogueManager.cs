@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -51,11 +52,12 @@ public class DialogueManager : MonoBehaviour
 
             yield return new WaitForSeconds(phrase.Time);
 
-            ExecuteDialogue(index+1);
+            StartCoroutine(nameof(ExecuteDialogue),index+1);
         }
         else
         {
-            canvas.SetActive(false);
+            //canvas.SetActive(false);
+            SceneManager.LoadScene("GameScene");
         }
     }
 }
