@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public GameObject canvas;
-    public GameObject textField;
+    public TextMeshProUGUI textField;
+    public AudioSource audioSource;
     public GameObject introDialogue;
-
-    public string[] dialogueQuotes;
-    public float[] dialogueTime;
-
-    public AudioClip[] dialogueAudios;
 
     // Start is called before the first frame update
     void Start()
@@ -30,18 +27,33 @@ public class DialogueManager : MonoBehaviour
     {
         canvas.SetActive(true);
 
-
-
-/*        for(int i = 0; i < introDialogue.Phrases.Count; i++)
+        foreach(Phrase phrase in introDialogue.GetPhrases())
         {
- /*           if (introDialogue.Phrases[i].Diction)
-            {
-                audioSource.clip = Phrases[currentPhraseIndex].Diction;
-                audioSource.Play();
-            }
-
-            textField.text = introDialogue.Phrases[i].Text;
+            Debug.Log(phrase);
         }
-        */
+
+/*        foreach (DialogItem dialogue in dialogues)
+        {
+            ExecuteDialogue(dialogue);
+        }*/
     }
+
+/*    IEnumerator ExecuteDialogue(DialogItem dialogue)
+    {
+/*        textField.text = dialogue.phrase;
+        if(dialogue.audio)
+        {
+            audioSource.clip = dialogue.audio;
+            audioSource.Play();
+        }
+        yield return new WaitForSeconds(dialogue.time);
+    }
+    */
+
+}
+
+struct DialogItem {
+    public string phrase;
+    public float time;
+    public AudioClip audio;
 }

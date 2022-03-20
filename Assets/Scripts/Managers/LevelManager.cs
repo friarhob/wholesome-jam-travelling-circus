@@ -6,7 +6,6 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
 
-    public event UnityAction OnStartLevel;
     public event UnityAction OnFinishLevel;
 
     private bool levelRunning;
@@ -24,7 +23,7 @@ public class LevelManager : MonoBehaviour
     {
         Manager.Instance.currentLevel = this;
         levelRunning = false;
-        level = 0;
+        level = 1;
     }
 
     void Update()
@@ -48,6 +47,7 @@ public class LevelManager : MonoBehaviour
 
     private void StartLevelLogic()
     {
+        level++;
         levelRunning = true;
         remainingTime = 10f - level;
 
@@ -55,8 +55,6 @@ public class LevelManager : MonoBehaviour
         foregroundDay.SetActive(true);
         backgroundNight.SetActive(false);
         foregroundNight.SetActive(false);
-
-        OnStartLevel?.Invoke();
     }
 
 /*    public void Run() //start level
