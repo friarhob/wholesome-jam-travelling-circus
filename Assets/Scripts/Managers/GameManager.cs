@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public SoundManager soundManager;
     public MenuManager menuManager;
-    public DialogsManager dialogueManager;
+    public DialogueManager dialogueManager;
     public LevelManager levelManager;
 
     void Awake()
@@ -30,6 +30,6 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        //dialogueManager.RunDialogue();
     }
 }

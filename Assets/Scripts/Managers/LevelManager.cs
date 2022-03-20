@@ -25,7 +25,6 @@ public class LevelManager : MonoBehaviour
         Manager.Instance.currentLevel = this;
         levelRunning = false;
         level = 0;
-        RunDialogue();
     }
 
     void Update()
@@ -46,13 +45,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    void RunDialogue()
-    {
-        if(dialogue)
-        {
-            
-        }
-    }
 
     private void StartLevelLogic()
     {
