@@ -88,5 +88,3 @@ public class LevelManager : MonoBehaviour
     }
 
 }
-
-public enum Creature {Nessie, Unicorn, Chimera, Gryphon};
