@@ -615,6 +615,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &620978236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6845142992014451713, guid: df034e1c6149df642831146872839038, type: 3}
+  m_PrefabInstance: {fileID: 206727333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &661125287
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,11 +732,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   remainingTime: 0
-  dialogue: {fileID: 11400000, guid: b9d1aa082fa95cf47ab6015965c9b6df, type: 2}
   backgroundDay: {fileID: 661125287}
   foregroundDay: {fileID: 1814016941}
   backgroundNight: {fileID: 24934744}
   foregroundNight: {fileID: 318092632}
+  nessieImage: {fileID: 620978236}
+  unicornImage: {fileID: 2077420348}
+  chimeraImage: {fileID: 1877384563}
+  gryphonImage: {fileID: 1826414776}
 --- !u!4 &661368023
 Transform:
   m_ObjectHideFlags: 0
@@ -1590,6 +1598,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1826414776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6845142992014451713, guid: df034e1c6149df642831146872839038, type: 3}
+  m_PrefabInstance: {fileID: 1215428156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1877384563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6845142992014451713, guid: df034e1c6149df642831146872839038, type: 3}
+  m_PrefabInstance: {fileID: 1779963821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938865202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,6 +1772,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2077420348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6845142992014451713, guid: df034e1c6149df642831146872839038, type: 3}
+  m_PrefabInstance: {fileID: 6062097251736129574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2092044615
 GameObject:
   m_ObjectHideFlags: 0

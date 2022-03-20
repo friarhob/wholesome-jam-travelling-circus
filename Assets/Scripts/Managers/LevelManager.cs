@@ -14,11 +14,21 @@ public class LevelManager : MonoBehaviour
     public GameObject backgroundNight;
     public GameObject foregroundNight;
 
+    public GameObject nessieImage;
+    public GameObject unicornImage;
+    public GameObject chimeraImage;
+    public GameObject gryphonImage;
+
     void Start()
     {
         levelRunning = false;
         level = 1;
 
+        nessieImage.SetActive(true);
+        unicornImage.SetActive(false);
+        chimeraImage.SetActive(false);
+        gryphonImage.SetActive(false);
+        
         StartLevel();
     }
 
@@ -40,6 +50,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void BuyAnimal(Creature creature)
+    {
+        if(creature == Creature.Nessie) nessieImage.SetActive(true);
+        if(creature == Creature.Unicorn) unicornImage.SetActive(true);
+        if(creature == Creature.Chimera) chimeraImage.SetActive(true);
+        if(creature == Creature.Gryphon) gryphonImage.SetActive(true);
+    }
 
     private void StartLevel()
     {
@@ -54,3 +71,5 @@ public class LevelManager : MonoBehaviour
     }
 
 }
+
+enum Creature {Nessie, Unicorn, Chimera, Gryphon};
