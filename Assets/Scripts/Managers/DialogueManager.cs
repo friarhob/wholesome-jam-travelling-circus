@@ -29,31 +29,18 @@ public class DialogueManager : MonoBehaviour
 
         foreach(Phrase phrase in introDialogue.GetPhrases())
         {
-            Debug.Log(phrase);
+            ExecuteDialogue(phrase);
         }
-
-/*        foreach (DialogItem dialogue in dialogues)
-        {
-            ExecuteDialogue(dialogue);
-        }*/
     }
 
-/*    IEnumerator ExecuteDialogue(DialogItem dialogue)
+    IEnumerator ExecuteDialogue(Phrase phrase)
     {
-/*        textField.text = dialogue.phrase;
-        if(dialogue.audio)
+        textField.text = phrase.Text;
+        if(phrase.Diction)
         {
-            audioSource.clip = dialogue.audio;
+            audioSource.clip = phrase.Diction;
             audioSource.Play();
         }
-        yield return new WaitForSeconds(dialogue.time);
+        yield return new WaitForSeconds(phrase.Time);
     }
-    */
-
-}
-
-struct DialogItem {
-    public string phrase;
-    public float time;
-    public AudioClip audio;
 }
