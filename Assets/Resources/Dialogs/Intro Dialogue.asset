@@ -27,3 +27,6 @@ MonoBehaviour:
   - Text: answer to some phrase
     Time: 3
     Diction: {fileID: 0}
+  - Text: answer to some phrase
+    Time: 3
+    Diction: {fileID: 0}
