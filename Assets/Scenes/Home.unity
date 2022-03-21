@@ -3191,6 +3191,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1062897136}
     m_Modifications:
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_text
+      value: 'Fernando Aires: Game Designer, Composer
+
+
+        Grace Culloton: Creature
+        Artist
+
+
+        Gwen Katz: UI and Environment Artist, Game Designer
+
+
+        Kate
+        Tacastacas: UX Designer, Game Designer
+
+
+        Lily Hopkins: Composer,
+        Sound Designer
+
+
+        Timofey Andropov: Game Designer'
+      objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486604, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_Name
       value: Body Text
@@ -3956,6 +3978,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1702845886}
     m_Modifications:
+    - target: {fileID: 9094670327453486594, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
+      propertyPath: m_text
+      value: 'You have four commands: Buy, Feed, Play, and Show.
+
+
+        Buy gives
+        you a new animal (if you have enough money).
+
+
+        Feed makes the animals
+        grow (if you have enough money).
+
+
+        Play keeps them in tiptop shape
+        (this is the mechanic you came up with).
+
+
+        Show changes it to the
+        Night scene and earns you points, depending on how many tiptop animals you
+        have.
+
+
+        You win when you get 2000 points.'
+      objectReference: {fileID: 0}
     - target: {fileID: 9094670327453486604, guid: d211264b6d96cc341b65ab6757e12f4a, type: 3}
       propertyPath: m_Name
       value: Text (TMP)
